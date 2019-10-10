@@ -17,11 +17,10 @@ def take_a_number(deli, name)
 end 
 
 def now_serving(deli)
-    if deli.empty?
-      puts "There is nobody waiting to be served!"
-    else 
-      deli.each.shift do |name|
-        puts "Currently serving #{name}."
-    end
-  end 
+  if deli.empty?
+    puts "There is nobody waiting to be served!"
+  else
+      puts "Currently serving #{deli.first}"
+      deli.shift
+  end
 end
